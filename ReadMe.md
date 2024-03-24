@@ -10,7 +10,7 @@ are excluded from the repo for privacy reasons.
 
 The data folder can be used for data that can be published in the repo.
 
-The repo is at <insert url here>
+The repo is at https://github.com/NigelWGMajor/polyglot-sandbox
 
 The database connection string is always read from outside the repo!
 
