@@ -11,6 +11,8 @@
 .html/*
 .media/*
 .nuget/*
+.sql/*
+.code/*
 
 **/bin/**
 **/obj/**

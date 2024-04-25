@@ -1,0 +1,242 @@
+body {
+  --data-text: #cccccc;
+  --data-background-even: #1f1f1f; 
+  --data-background-odd: #111; 
+  --name-text: #888888;
+  --name-background-even: #2c2c2c;
+  --name-background-odd: #222222;
+  --head-text: #888888;
+  --head-background: #2c2c2c;
+  --box-low: #888888;
+  --box-high: #aaaaaa;
+  --mid-low: #333333;
+  --mid-high: #666666;
+  --full: #000000;
+  background: var(--name-background-even);
+  font-family: "Open Sans", sans-serif !important;
+  --full-height: 800px;
+  --full-width: 800px;
+}
+h4  {
+  color: var(--data-text);
+}
+.outer {
+  font-family: "Open Sans", sans-serif !important;
+  position: relative !important;
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
+  margin: 0 !important;
+  border-top: 0 solid black !important;
+  table-layout: auto !important;
+}
+.edge {
+  position: sticky !important;
+  left: 0;
+  z-index: 99;
+}
+.narrow {
+  min-width: 120px;
+  overflow-x: auto;
+}
+.containerx { /* This is the container for the table, use this to limit the width */
+  max-width: 1000px;
+  width: 100%;
+  margin: 0;
+  margin-top: 0;
+  overflow-x: auto;
+}
+.tablex { /* This is the table */
+  font-family: "Open Sans", sans-serif !important;
+  position: relative !important;
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
+  border-top: 0 !important;
+  table-layout: auto !important;
+  width: 100% !important;
+  border: none !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+  * {
+    border: none !important;
+    margin: 0 !important;
+  }
+  overflow-x: auto !important;
+  .trx td { /* This is needed on each table row */
+    min-width: 25%;
+    max-width: 120px !important;
+    word-wrap: break-word !important;
+    color: var(--data-text);
+    padding: 2px 2px;
+    vertical-align: top;
+    text-align: left;
+    margin: 0 !important;
+    font-weight: normal;
+    white-space: nowrap;
+  }
+}
+.lj { /* This is typical data cell - you can limit the width here.*/
+  color: var(--data-text);
+  text-align: left;
+  font-family: "consolas", monospace;
+  margin: 0 !important;
+  padding-left: 0px;
+  padding-right: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  min-width: 25%;
+  max-width: 500px;
+  word-wrap: break-word;
+  overflow: auto;
+  vertical-align: top;
+
+
+}
+.trx:nth-child(even) td{ /* This is the even row */
+  background-color: var(--data-background-even) !important;
+}
+.trx:nth-child(odd) td{ /* This is the odd row */
+  background-color: var(--data-background-odd) !important;
+}
+
+.trx:nth-child(even) .lh { /* This is the left-hand column, used for the headers */
+  width: 120px !important;
+  min-width: 120px !important;
+  position: sticky;
+  z-index: 99;
+  font-family: "consolas", monospace;
+  font-style: italic;
+  font-size: 85%;
+  padding-left: 0px;
+  padding-right: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin: 0 !important;
+  text-align: right;
+  color: var(--name-text);
+  left: 0;
+  white-space: nowrap;
+  background-color: var(--name-background-even) !important;
+  vertical-align: top !important;
+}
+.trx:nth-child(odd) .lh { /* This is the left-hand column, used for the headers */
+  position: sticky;
+  width: 120px !important; 
+  min-width: 120px !important;
+  z-index: 99;
+  font-family: "consolas", monospace;
+  font-style: italic;
+  font-size: 85%;
+  padding-top: 4px;
+  padding-left: 0px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  margin: 0 !important;
+  text-align: right;
+  color: var(--name-text);
+  white-space: nowrap;
+  left: 0;
+  background-color: var(--name-background-odd) !important;
+  vertical-align: top !important;
+ }
+.th { /* This is the header row */
+  
+  font-family: "consolas", monospace;
+  font-style: italic;
+  font-size: 85%;
+  padding: 4px;
+  text-align: left;
+  color: var(--head-text);
+  background-color: var(--head-background) !important;
+  white-space: nowrap;
+  top: 0;
+}
+.sub {
+    max-width: 1000px;
+    width: 100%;
+    display: block;
+    margin-top: 1px !important;
+    box-shadow:  0 0 1px var(--box-low) !important;
+    vertical-align: top !important;
+}
+.sub:hover {
+    box-shadow: 0 0 2px var(--box-high) !important;
+}
+.item {
+  vertical-align: top !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  padding-left: 3px !important;
+  padding-right: 3px !important;
+  box-sizing: content-box !important;
+  box-shadow:  0 0 3px var(--head-text) !important;
+}
+.hid {
+  display: none; 
+}
+.neg {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  vertical-align: top !important;
+}
+.tall {
+  vertical-align: top !important;
+  border: 1px var(--full)  solid !important;
+  display: block !important;
+}
+::-webkit-scrollbar {
+  width: 20px; 
+}
+::-webkit-scrollbar-track {
+  background: var(--mid-low); 
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px; /* roundness of the scroll thumb */
+  background-color: var(--mid-high); /* color of the scroll thumb */
+  border: 2px solid var(--mid-low); /* creates padding around scroll thumb */
+}	 
+    .body {
+        max-height: var(--initial-height);
+    }
+
+    .max-box {
+        box-sizing: border-box;
+        display: block;
+        /* flex-direction: column; */
+        position: relative;
+        height: var(--full-height);
+        max-height: var(--full-height);
+        width: var(--full-width);
+        max-width: var(full-width);
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        background: rgba(44, 42, 42, 0.833);
+        border: 0px solid #d51515;
+    }
+
+    .top-box {
+        box-sizing: border-box;
+        display: block;
+        overflow: auto;
+        background-color: rgb(108, 108, 108);
+        height: 0;
+        width: auto;
+        border: 1px solid #c0c0c0;
+        min-height: 0;
+        max-height: 100%;
+        /* padding: 20px; */
+        /* margin: 20px; */
+    }
+
+    .mid-box {
+        display: block;
+        width: auto;
+        height: 100%;
+        /* padding: 20px; */
+        /* margin: 20px; */
+        background-color: #4c4c4c;
+        border: 1px solid #c0c0c0;
+        border-top: 6px solid #0c0b5e;
+        overflow: auto;
+    }
